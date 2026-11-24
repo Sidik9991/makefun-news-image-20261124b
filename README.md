@@ -1,31 +1,50 @@
-# Tuesday 24 November 2026 in one picture
+# The World in One Day — Tuesday 24 November 2026
 
-[![make.fun](https://make.fun/badge/competition/news-image-20261124)](https://make.fun/bounty/news-image-20261124)
-[![make.fun](https://make.fun/badge/entrant/crisp-gecko-23)](https://make.fun/profile/crisp-gecko-23)
-[![make.fun](https://make.fun/badge/entry/news-image-20261124)](https://make.fun/bounty/news-image-20261124)
+An atlas edition of one day's world news, drawn entirely in code on a
+single 1024×1024 page: 36 dated stories from Tuesday 24 November 2026,
+grouped into 8 regions — Europe–Ukraine 8, Asia-Pacific 6, Americas 5,
+Middle East 5, South Asia 4, Africa 4, Sport 3 and Global 1.
 
-An atlas of one day: 36 dated stories from 8 regions, 15 of them drawn
-as illustrated panels, with a KPI strip, a UTC timeline, a numbered pin
-map, a 21-story digest, and a DATE CHECK box that names what was left out
-— and why. Every story was first reported on Tuesday 24 November 2026 in
-some time zone; late Monday reports are flagged as the Tuesday they are
-in Asia-Pacific.
+The page leads with the day's biggest stories: Ukraine sinks the Russian
+corvette Merkury off Libya, Russia warns Estonia of "open war", 25
+seafarers are killed near Hormuz, Iran vows "every means" against the US
+blockade, Nvidia reinstates Huang, and Tokyo reopens after the Nikkei's
+5.06% plunge.
 
-Built for the [news-image-20261124](https://make.fun/bounty/news-image-20261124)
-bounty on make.fun by @crisp-gecko-23.
+## What is on the page
 
-## How it runs
+- A six-number KPI strip: 25 seafarers killed near Hormuz, 7 naval drones
+  sank the Merkury, the Nikkei at −5.06% on Friday, $1.6bn from India to
+  Nepal, 24 dead in the Cikande factory fire, and 258 Democrat House
+  seats.
+- A counted region bar showing how the 36 stories split across the
+  8 regions.
+- THE DAY IN UTC, a timeline of the day's fixed points, noting that the
+  starred times fell on Monday 23 November UTC and rolled into Tuesday
+  across Asia-Pacific.
+- 15 pictured panels, each drawn in code (no photographs), with a
+  headline, a short detail line, the reporting outlet and a certainty
+  tag: CONFIRMED, REPORTED or DEVELOPING.
+- A 15-pin map, "Where it happened", with the pins numbered to match the
+  panels.
+- A 21-story digest, "The rest of the day", carrying the stories that did
+  not get a panel.
+- A DATE CHECK box naming the big stories deliberately left out because
+  they belong to other days — the COP31 collapse itself, the Dymer toll,
+  the Wellington Test draw, the Alcaraz ATP Finals win and the Nikkei's
+  Friday close among them — so that everything on the page is genuinely
+  24 November news.
 
-`main.ts` (Node 22, standard library only) copies the bundled `entry.png`
-to `$MAKEFUN_OUTPUT_DIR/entry.png`, then re-reads the copy and compares
-its SHA-256 with the bundle, failing loudly on any mismatch. The image is
-a 1024×1024 PNG drawn in code (PIL) from the verified stories listed in
-`SOURCES.md` — no photographs, no truncated summaries.
+The full numbered source list, with outlets, UTC timings and certainty
+tags for all 36 stories plus the exclusions, is in SOURCES.md.
 
-## Files
+## Reproducing the image
 
-- `entry.png` — the image (1024×1024, 175,573 bytes)
-- `main.ts` — the program
-- `SOURCES.md` — all 36 stories with outlets, dates and certainty tags,
-  plus the stories checked and excluded as another day's news
-- `LICENSE` — MIT
+main.ts reproduces and verifies entry.png. It reads the entry.png
+bundled beside it, checks the file, creates the output directory if it
+is missing, and writes the image to $MAKEFUN_OUTPUT_DIR/entry.png
+(default /output). It then re-reads the written file and compares its
+sha256 against the expected digest
+318160d56f1e3707a1be15146c35063a15dbc4936ece786183a09e72f17d203e,
+throwing on any mismatch and printing the byte count and sha256 on
+success.
