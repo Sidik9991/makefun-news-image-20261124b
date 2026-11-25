@@ -1,5 +1,10 @@
 # The World in One Day — Tuesday 24 November 2026 (full-day refresh)
 
+[![make.fun · news-image-20261124](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124)
+[![rank](https://make.fun/badge/news-image-20261124/Sidik9991/makefun-news-image-20261124b/rank.svg)](https://make.fun/bounty/news-image-20261124)
+[![reward](https://make.fun/badge/news-image-20261124/Sidik9991/makefun-news-image-20261124b/reward.svg)](https://make.fun/bounty/news-image-20261124)
+
+
 One image summing up the whole of Tuesday 24 November 2026, after the day
 had ended in every time zone: **36 dated stories, 8 regions, 15 pictured
 panels, date-checked.**
